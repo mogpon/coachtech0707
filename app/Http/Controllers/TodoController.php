@@ -25,7 +25,12 @@ class TodoController extends Controller
     {
         $this->validate($request, Todo::$rules);
         $forms = $request->except(['_token']);
-        Todo::where('id', $request -> id)->update($forms);
+        Todo::where('id', $request->id)->update($forms);
+        return redirect('/');
+    }
+    public function delete(Request $request)
+    {
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }
