@@ -14,12 +14,12 @@
     <th>更新</th>
     <th>削除</th>
   </tr>
-  @foreach($form as $for)
+  @foreach($forms as $form)
   <tr>
-    <td>{{$for->created_at}}</td>
+    <td>{{$form->created_at}}</td>
     <form action="/todo/update" method="post" class="content_in">
       @csrf
-      <td><input type="text" name="content" class="form_2" value="{{$for->content}}"></td>
+      <td><input type="text" name="content" class="form_2" value="{{$form->content}}"></td>
       <td><input type="submit" value="更新" class="btn_2"></td>
       <td><input type="submit" value="削除" class="btn_3"></td>
     </form>

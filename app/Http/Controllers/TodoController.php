@@ -16,16 +16,16 @@ class TodoController extends Controller
     {
         $this->validate($request, Todo::$rules);
         $todo = new Todo;
-        $form = $request->all();
-        unset($form['_token_']);
-        $todo->fill($form)->save();
-        return redirect('/todo/create');
+        $forms = $request->all();
+        unset($forms['_token_']);
+        $todo->fill($forms)->save();
+        return redirect('/');
     }
     public function update(Request $request)
     {
         $this->validate($request, Todo::$rules);
-        $form = $request->except(['_token']);
-        Todo::where('content', $request -> content)->update($form);
-        return redirect('/todo/update');
+        $forms = $request->except(['_token']);
+        Todo::where('id', $request -> id)->update($forms);
+        return redirect('/');
     }
 }
