@@ -24,9 +24,13 @@
         <input type="hidden" value="{{$form->id}}" name="id">
       </td>
       <td><input type="submit" value="更新" class="btn_2"></td>
-      <form action="/todo/delete" method="post">
-        <td><input type="submit" value="削除" class="btn_3"><input type="hidden" value="{{$item->id}}" name="id"></td>
-      </form>
+    </form>
+    <form action="/todo/delete" method="post">
+      @csrf
+      <td>
+        <input type="submit" value="削除" class="btn_3">
+        <input type="hidden" value="{{$item->id}}" name="id">
+      </td>
     </form>
   </tr>
   @endforeach

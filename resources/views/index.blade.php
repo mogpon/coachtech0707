@@ -2,6 +2,9 @@
 
 @section('content')
 <h2>Todo List</h2>
+  @error('content')
+    <p>{{$message}}</p>
+  @enderror
 <form action="/todo/create" method="post" class="content_in">
   @csrf
   <input type="text" name="content" class="form">
@@ -24,9 +27,13 @@
         <input type="hidden" value="{{$item->id}}" name="id">
       </td>
       <td><input type="submit" value="更新" class="btn_2"></td>
-      <form action="/todo/delete" method="post">
-        <td><input type="submit" value="削除" class="btn_3"><input type="hidden" value="{{$item->id}}" name="id"></td>
-      </form>
+    </form>
+    <form action="/todo/delete" method="post">
+      @csrf
+      <td>
+        <input type="submit" value="削除" class="btn_3">
+        <input type="hidden" value="{{$item->id}}" name="id">
+      </td>
     </form>
   </tr>
   @endforeach

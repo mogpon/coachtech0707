@@ -8,7 +8,7 @@
   <title>COACHTECH</title>
   <style>
     body {
-      background: rgb(2, 2, 122);
+      background: #2d197c;
       margin: 0;
       padding: 0;
     }
@@ -46,8 +46,8 @@
 
     .btn_1 {
       padding: 7px 15px;
-      color: hotpink;
-      border-color: hotpink;
+      color: #dc70fa;
+      border-color: #dc70fa;
       border-radius: 5px;
       ;
       background: white;
@@ -62,8 +62,8 @@
 
     .btn_2 {
       padding: 7px 15px;
-      color: rgb(240, 138, 28);
-      border-color: rgb(240, 138, 28);
+      color: #fa9770;
+      border-color: #fa9770;
       border-radius: 5px;
       ;
       background: white;
@@ -78,8 +78,8 @@
 
     .btn_3 {
       padding: 7px 15px;
-      color: rgb(88, 249, 200);
-      border-color: rgb(88, 249, 200);
+      color: #71fadc;
+      border-color: #71fadc;
       border-radius: 5px;
       ;
       background: white;
